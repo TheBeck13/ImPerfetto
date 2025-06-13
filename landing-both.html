@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>I'mPerfetto - Natural Nootropic Juices</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+  :root {
+    --color-bg: #ffffff;
+    --color-white: #fff;
+    --color-orange-light: #fdf9b4;
+    --color-gray-medium: #6b7280;
+    --color-gray-dark: #111827;
+    --color-accent: #0071e3;
+    --color-green: #4CAF50;
+    --color-orange: #ff9500;
+    --font-primary: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+      Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --transition-fast: 0.3s ease-out;
+    --border-radius: 12px;
+    --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    margin: 0;
+    background-color: var(--color-bg);
+    color: var(--color-gray-dark);
+    font-family: var(--font-primary);
+    font-weight: 400;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  a {
+    color: var(--color-accent);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color var(--transition-fast);
+  }
+  a:hover,
+  a:focus {
+    color: #005bb5;
+    outline: none;
+  }
+  header {
+    position: sticky;
+    top: 0;
+    background: var(--color-orange-light);
+    border-bottom: 1px solid var(--color-orange-light);
+    z-index: 10;  
+  }
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: last baseline;
+    justify-content: space-between;
+    height: 100px;
+    border-bottom: #6b7280 1px solid;
+  }
+  .logo {
+    user-select: none;
+    letter-spacing: 0.04em;
+    justify-content: left;
+    display: flex;
+  }
+  nav {
+    display: flex;
+    align-items: center;
+  }
+  nav button {
+    background: var(--color-accent);
+    color: var(--color-white);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: background-color var(--transition-fast);
+  }
+  nav button:hover,
+  nav button:focus {
+    background-color: #005bb5;
+    outline: none;
+  }
+
+  main {
+    max-width: 900px;
+    margin: 2rem auto 4rem auto;
+    padding: 0 1.5rem;
+  }
+
+  h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 0.25rem;
+    color: var(--color-gray-dark);
+  }
+  h2 {
+    font-weight: 600;
+    font-size: 2rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    color: var(--color-gray-dark);
+  }
+  h3 {
+    font-weight: 600;
+    margin-bottom: 0.7rem;
+    color: var(--color-gray-dark);
+  }
+  p {
+    color: var(--color-gray-medium);
+    font-weight: 400;
+    font-size: 1.125rem;
+    margin-bottom: 1.25rem;
+  }
+  ul {
+    margin-left: 1rem;
+    margin-bottom: 1.25rem;
+    color: var(--color-gray-medium);
+    font-size: 1.125rem;
+  }
+  ul li {
+    margin-bottom: 0.5rem;
+  }
+
+  .card-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 2rem;
+    margin-top: 1rem;
+  }
+  .card {
+    background: var(--color-white);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-light);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  }
+  .card:hover,
+  .card:focus-within {
+    transform: scale(1.03);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.15);
+    outline: none;
+    cursor: pointer;
+  }
+  .card img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 1.25rem;
+    user-select: none;
+  }
+  .product-badge {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    border-radius: 9999px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--color-white);
+    margin-bottom: 1rem;
+    user-select: none;
+  }
+  .badge-anxiety {
+    background-color: var(--color-green);
+  }
+  .badge-focus {
+    background-color: var(--color-orange);
+  }
+  .motto {
+    color: var(--color-gray-dark);
+    font-style: italic;
+    margin-top: 1rem;
+    font-weight: 400;
+  }
+
+  footer {
+    max-width: 900px;
+    margin: 4rem auto 2rem auto;
+    padding: 0 1.5rem;
+    font-size: 0.9rem;
+    color: var(--color-gray-medium);
+    text-align: center;
+    user-select: none;
+  }
+</style>
+</head>
+<body>
+<header>
+  <div class="container" role="banner">
+    <div class="logo" aria-label="I'mPerfetto logo" tabindex="0" >
+      <img src="I’mPerfetto-2.png" alt="I'mPerfetto Logo" width="250px" height="45px"/>
+    </div>
+    <nav aria-label="Language selection">
+      <button id="toggle-lang-btn" aria-live="polite" aria-pressed="false" aria-label="Switch language">Italiano</button>
+      <div style="height: 40px;"></div>
+    </nav>
+  </div>
+</header>
+
+<main id="content" role="main" tabindex="-1">
+  <!-- English Content -->
+  <section id="content-en">
+    <section class="hero" aria-label="Landing page introduction">
+      <h1>Natural Nootropic Juices for Mind & Body Harmony</h1>
+      <p>Discover I'mPerfetto, an innovative line of natural juices infused with powerful nootropic ingredients to support your mental wellness.</p>
+    </section>
+
+    <section id="about-nootropics" aria-labelledby="about-noo-title">
+      <h2 id="about-noo-title">What Are Nootropics?</h2>
+      <p>Nootropics are natural or synthetic substances that enhance cognitive function, memory, creativity, and motivation in healthy individuals. These smart supplements help unlock your mind's potential and promote mental clarity and focus.</p>
+      <p>Our juices are uniquely crafted with nootropic botanicals proven to support brain health, stress relief, and enhanced cognition.</p>
+    </section>
+
+    <section id="science-studies" aria-labelledby="science-title">
+      <h2 id="science-title">Science Behind Nootropics</h2>
+      <p>Scientific research has shown promising results on the benefits of key nootropic ingredients found in our juices:</p>
+      <ul>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4270108/" target="_blank" rel="noopener">Ashwagandha and stress reduction</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6836116/" target="_blank" rel="noopener">Ginkgo Biloba for cognitive enhancement</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5485202/" target="_blank" rel="noopener">Nootropics and memory improvement overview</a></li>
+      </ul>
+    </section>
+
+    <section id="products" aria-labelledby="products-title">
+      <h2 id="products-title">Our Nootropic Juice Lines</h2>
+      <div class="card-grid">
+        <article class="card" tabindex="0" role="region" aria-labelledby="ashwa-title" aria-describedby="ashwa-desc">
+          <img src="I’mPerfetto-mela-ashwagandha-3-nosfondo.png" alt="Green Apple & Kiwi Juice Bottle" loading="lazy" />
+          <span class="product-badge badge-anxiety" aria-label="Ashwagandha based product for anxiety and stress reduction">Anxiety & Stress</span>
+          <h3 id="ashwa-title">Green Apple & Kiwi - Ashwagandha</h3>
+          <p id="ashwa-desc">A delicious blend inspired by nature's calmness, combining green apple and kiwi flavors with Ashwagandha, a powerful nootropic famous for reducing anxiety and easing stress.</p>
+          <p class="motto"><em>Drink away your anxiety.</em></p>
+        </article>
+
+        <article class="card" tabindex="0" role="region" aria-labelledby="ginko-title" aria-describedby="ginko-desc">
+          <img src="I’mPerfetto-arancia-ginkoBiloba-3-nosfondo.png" alt="Orange Juice Bottle" loading="lazy" />
+          <span class="product-badge badge-focus" aria-label="Ginkgo Biloba based product for enhanced focus and memory">Focus & Memory</span>
+          <h3 id="ginko-title">Orange - Ginkgo Biloba</h3>
+          <p id="ginko-desc">Bursting with vibrant orange flavor, enriched with Ginkgo Biloba to support focus, mental clarity, and memory enhancement — perfect to power through your day.</p>
+          <p class="motto"><em>Drink up your focus.</em></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gad-info" aria-labelledby="gad-title">
+      <h2 id="gad-title">About Generalized Anxiety Disorder (GAD)</h2>
+      <p>Generalized Anxiety Disorder (GAD) is one of the most common mental health conditions, affecting approximately 6.8 million adults in the United States alone, or about 3.1% of the population annually.</p>
+      <p>People living with GAD experience persistent and excessive worry about various aspects of life, leading to symptoms such as restlessness, fatigue, difficulty concentrating, and sleep disturbances.</p>
+      <p>Products like our Ashwagandha-infused juice offer natural support by potentially helping to reduce anxiety symptoms and promote calmness in daily life.</p>
+      <p>For more detailed information, visit <a href="https://www.nimh.nih.gov/health/topics/generalized-anxiety-disorder-gad" target="_blank" rel="noopener">National Institute of Mental Health (NIMH) - GAD overview</a>.</p>
+    </section>
+  </section>
+
+  <!-- Italian Content -->
+  <section id="content-it" hidden>
+    <section class="hero" aria-label="Introduzione landing page">
+      <h1>Succhi Nootropici Naturali per Armonia di Mente e Corpo</h1>
+      <p>Scopri I'mPerfetto, una linea innovativa di succhi naturali infusi con potenti ingredienti nootropici per supportare il tuo benessere mentale.</p>
+    </section>
+
+    <section id="about-nootropics-it" aria-labelledby="about-noo-title-it">
+      <h2 id="about-noo-title-it">Cosa Sono i Nootropici?</h2>
+      <p>I nootropici sono sostanze naturali o sintetiche che migliorano le funzioni cognitive, la memoria, la creatività e la motivazione negli individui sani. Questi integratori intelligenti aiutano a sbloccare il potenziale della mente e favorire chiarezza mentale e concentrazione.</p>
+      <p>I nostri succhi sono unici, formulati con botanici nootropici comprovati per supportare la salute cerebrale, il sollievo dallo stress e il miglioramento cognitivo.</p>
+    </section>
+
+    <section id="science-studies-it" aria-labelledby="science-title-it">
+      <h2 id="science-title-it">La Scienza Dietro i Nootropici</h2>
+      <p>La ricerca scientifica ha mostrato risultati promettenti sui benefici dei principali ingredienti nootropici presenti nei nostri succhi:</p>
+      <ul>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4270108/" target="_blank" rel="noopener">Ashwagandha e riduzione dello stress</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6836116/" target="_blank" rel="noopener">Ginkgo Biloba per miglioramento cognitivo</a></li>
+        <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5485202/" target="_blank" rel="noopener">Panoramica su nootropici e miglioramento della memoria</a></li>
+      </ul>
+    </section>
+
+    <section id="products-it" aria-labelledby="products-title-it">
+      <h2 id="products-title-it">Le Nostre Linee di Succo Nootropico</h2>
+      <div class="card-grid">
+        <article class="card" tabindex="0" role="region" aria-labelledby="ashwa-title-it" aria-describedby="ashwa-desc-it">
+          <img src="https://cdn.pixabay.com/photo/2017/08/30/07/31/juice-2690644_1280.png" alt="Bottiglia di Succo Mela Verde e Kiwi" loading="lazy" />
+          <span class="product-badge badge-anxiety" aria-label="Prodotto a base di Ashwagandha per ansia e riduzione dello stress">Ansia e Stress</span>
+          <h3 id="ashwa-title-it">Mela Verde & Kiwi - Ashwagandha</h3>
+          <p id="ashwa-desc-it">Una miscela deliziosa ispirata alla calma della natura, che combina i sapori di mela verde e kiwi con Ashwagandha, un potente nootropico famoso per ridurre l'ansia e alleviare lo stress.</p>
+          <p class="motto"><em>Bevi via la tua ansia.</em></p>
+        </article>
+
+        <article class="card" tabindex="0" role="region" aria-labelledby="ginko-title-it" aria-describedby="ginko-desc-it">
+          <img src="https://cdn.pixabay.com/photo/2016/06/24/10/48/orange-1475253_1280.png" alt="Bottiglia di Succo all'Arancia" loading="lazy" />
+          <span class="product-badge badge-focus" aria-label="Prodotto a base di Ginkgo Biloba per migliorare focus e memoria">Focus e Memoria</span>
+          <h3 id="ginko-title-it">Arancia - Ginkgo Biloba</h3>
+          <p id="ginko-desc-it">Ricco di vibrante sapore d'arancia, arricchito con Ginkgo Biloba per supportare il focus, la chiarezza mentale e il miglioramento della memoria — perfetto per affrontare la giornata.</p>
+          <p class="motto"><em>Bevi per il tuo focus.</em></p>
+        </article>
+      </div>
+    </section>
+
+    <section id="gad-info-it" aria-labelledby="gad-title-it">
+      <h2 id="gad-title-it">Informazioni sul Disturbo d'Ansia Generalizzato (GAD)</h2>
+      <p>Il Disturbo d'Ansia Generalizzato (GAD) è una delle condizioni di salute mentale più comuni, che colpisce circa 6,8 milioni di adulti solo negli Stati Uniti, ovvero circa il 3,1% della popolazione ogni anno.</p>
+      <p>Le persone che vivono con il GAD sperimentano preoccupazioni persistenti ed eccessive su vari aspetti della vita, con sintomi come irrequietezza, affaticamento, difficoltà di concentrazione e disturbi del sonno.</p>
+      <p>Prodotti come il nostro succo infuso con Ashwagandha offrono un supporto naturale aiutando potenzialmente a ridurre i sintomi d'ansia e a promuovere la calma nella vita quotidiana.</p>
+      <p>Per informazioni più dettagliate, visita <a href="https://www.nimh.nih.gov/health/topics/generalized-anxiety-disorder-gad" target="_blank" rel="noopener">National Institute of Mental Health (NIMH) - panoramica sul GAD</a>.</p>
+    </section>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 I'mPerfetto. All rights reserved.</p>
+</footer>
+
+<script>
+  (function(){
+    const toggleBtn = document.getElementById('toggle-lang-btn');
+    const contentEn = document.getElementById('content-en');
+    const contentIt = document.getElementById('content-it');
+    const contentMain = document.getElementById('content');
+
+    function setLanguageToItalian() {
+      contentEn.hidden = true;
+      contentIt.hidden = false;
+      toggleBtn.textContent = 'English';
+      toggleBtn.setAttribute('aria-pressed', 'true');
+      toggleBtn.setAttribute('aria-label', 'Switch language to English');
+      contentMain.focus();
+    }
+
+    function setLanguageToEnglish() {
+      contentEn.hidden = false;
+      contentIt.hidden = true;
+      toggleBtn.textContent = 'Italiano';
+      toggleBtn.setAttribute('aria-pressed', 'false');
+      toggleBtn.setAttribute('aria-label', 'Switch language to Italian');
+      contentMain.focus();
+    }
+
+    toggleBtn.addEventListener('click', () => {
+      if(contentEn.hidden){
+        setLanguageToEnglish();
+      } else {
+        setLanguageToItalian();
+      }
+    });
+
+    // Initialize state: English shown
+    setLanguageToEnglish();
+  })();
+</script>
+</body>
+</html>
+
